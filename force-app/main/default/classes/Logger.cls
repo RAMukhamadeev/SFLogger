@@ -69,7 +69,7 @@ public with sharing class Logger {
             DataPayload__c = log.Payload__c,
             Message__c = log.Message__c,
             Tags__c = log.Tags__c,
-            UserName__c = getUserNameById(log.CreatedById)
+            UserName__c = getUserNameById(UserInfo.getUserId())
         );
 
 
