@@ -1,6 +1,6 @@
 public class L {
     // TODO: fix hardcoded username ...
-    public static Boolean log(String message) {
+    public static Boolean d(String message) {
         SFLog__e logEntry = new SFLog__e(
             UserName__c = 'Ruslan Mukhamadeev',
             Message__c = message
@@ -8,7 +8,7 @@ public class L {
         return publishEvent(logEntry);
     }
     
-    public static Boolean log(String message, Object payload) {
+    public static Boolean d(String message, Object payload) {
         SFLog__e logEntry = new SFLog__e(
             UserName__c = 'Ruslan Mukhamadeev',
             Message__c = message,
