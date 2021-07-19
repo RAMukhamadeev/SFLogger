@@ -1,6 +1,6 @@
 public class TestLaunch {
     public TestLaunch() {
-        //L.log('Hello World');
-        L.log('Hello World', [SELECT Id, Name FROM Account LIMIT 3]);
+        //L.log('Hello World 123123123');
+        L.log('Hello World', new Map<Id, Account>([SELECT Id, Name FROM Account LIMIT 3]));
     }
 }
