@@ -1,12 +1,11 @@
-public with sharing class Logger {
+public without sharing class Logger {
+    /*
     public String message = null;
     public String tags  = null;
     public Object payload  = null;
-    public String severity = 'Medium';
     public String logLevel = 'Info';
 
     public Logger() {
-
     }
 
     public void save() {
@@ -29,12 +28,6 @@ public with sharing class Logger {
         return this;
     }
 
-    public Logger setSeverity(String severity) {
-        this.severity = severity;
-
-        return this;
-    }
-
     public Logger setLogLevel(String logLevel) {
         this.logLevel = logLevel;
 
@@ -49,7 +42,7 @@ public with sharing class Logger {
 
     private Log__c getLog() 
     {
-        Log__c log = new Log__c(Severity__c = this.severity, LogLevel__c = this.logLevel);
+        Log__c log = new Log__c(LogLevel__c = this.logLevel);
         if (this.message != null) {
             log.Message__c = this.message;
         }
@@ -65,7 +58,6 @@ public with sharing class Logger {
 
     private SFLog__e getEventFromLog(Log__c log) {
         SFLog__e event = new SFLog__e(
-            CreationDate__c = log.LastModifiedDate,
             DataPayload__c = log.Payload__c,
             Message__c = log.Message__c,
             Tags__c = log.Tags__c,
@@ -91,4 +83,5 @@ public with sharing class Logger {
         User user = [SELECT Id, Username FROM User WHERE Id = :userId];
         return user.Username;
     }
+    */
 }

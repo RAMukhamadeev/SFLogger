@@ -1,4 +1,4 @@
-public class L {
+public without sharing class L {
     // TODO: fix hardcoded username ...
     public static Boolean d(String message) {
         SFLog__e logEntry = new SFLog__e(
