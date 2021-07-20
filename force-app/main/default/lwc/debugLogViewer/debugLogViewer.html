@@ -1,0 +1,14 @@
+<template>
+    <lightning-card icon-name="custom:custom14">
+        <div>
+            {logs.length} Debug Logs
+        </div>
+        <div>
+            <template for:each={logs} for:item="log">
+                <div key={log.id}>
+                    {log.message}
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
