@@ -1,14 +1,28 @@
 <template>
-    <lightning-card icon-name="custom:custom14">
-        <div>
-            {logs.length} Debug Logs
+    <div class="slds-card">
+        <div class="slds-card__header slds-grid slds-m-bottom_small">
+          <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__body">
+              <div class="slds-card__header-title">
+                Recieved {logs.length} logs
+              </div>
+            </div>
+          </header>
         </div>
-        <div>
+        <div class="slds-card__body slds-card__body_inner">
             <template for:each={logs} for:item="log">
-                <div key={log.id}>
-                    {log.message}
+                <div key={log.id} class="slds-p-around_small">
+                    <div>
+                        <span>[</span>
+                        <span>{log.timestamp}</span>
+                        <span>] </span>
+                        <span>{log.message}</span>
+                    </div>
+                    <div>
+                        <pre style="margin: 0;">{log.payload}</pre>
+                    </div>
                 </div>
             </template>
         </div>
-    </lightning-card>
+    </div>
 </template>
